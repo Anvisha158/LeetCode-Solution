@@ -7,5 +7,5 @@ This repository contains my DSA and LeetCode problem solution in c++
 - Two Pointer
 - Linked List
 # Language used
-C++
+- C++
 I am consistently practicing Data Structure and Algorithms.
