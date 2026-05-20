@@ -8,4 +8,4 @@ This repository contains my DSA and LeetCode problem solution in c++
 - Linked List
 # Language used
 - C++
-I am consistently practicing Data Structure and Algorithms.
+- I am consistently practicing Data Structure and Algorithms.
