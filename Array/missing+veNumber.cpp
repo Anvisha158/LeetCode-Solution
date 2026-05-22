@@ -1,16 +1,29 @@
 # include<iostream>
 # include<bits/stdc++.h>
 using namespace std;
-class Solution{
-    public:
-    int missingNumber(vector<int>& nums){
-        n=nums.size();
-        int ans=0;
-        for(int i=0;i<n;i++){
-            ans^=nums[i];
-            ans^=i;
-
+cclass Solution {
+public:
+    int firstMissingPositive(vector<int>& nums) {
+        int n=nums.size();
+        for(int i=0; i<n;i++){
+            if(nums[i]<=0){
+                nums[i]=n+1;
+            }
         }
-        
+        for(int i=0;i<n;i++){
+            int val=abs(nums[i]);
+            if(val>=1 && val<=n){
+                nums[val -1]=-abs(nums[val-1]);
+            }
+        }
+        for (int i=0;i<n;i++){
+            if(nums[i]>0){
+                return i+1;
+            }
+        }
+        return n+1;
+
     }
-}
+};
+// Time complexity:- O(n) 
+// space complexity:-O(1) for var val
