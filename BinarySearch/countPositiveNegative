@@ -1,0 +1,39 @@
+# include<iostream>
+# include<bits/stdc++.h>
+using namespace std;
+// brute force approach
+class Solution{
+    public:
+    int countPositiveNegative(vector<int> & nums){
+        int pos=0;
+        int neg=0;
+        for(int i=0;i<nums.size();i++){
+            if(nums[i]>0){
+                pos++;
+            }
+            else if(nums[i]<0){
+                neg++;
+            }
+        }
+        return max(pos,neg);
+    }
+};
+// time complexity:- O(n)
+// space complexity"- O(1)
+// optimize code
+// use binary search because the array is sorted and time complexity will be O(log n)
+class Solution{
+    public:
+    int countPositiveNegative(vector<int> & nums){
+        int low=0;
+        int high=nums.size()-1;
+        while(low<=high){
+            int mid=low+(high-low)/2;
+            if(nums[mid]>0){
+                high=mid-1;
+            }
+            else
+            }
+        }
+    }
+} 
