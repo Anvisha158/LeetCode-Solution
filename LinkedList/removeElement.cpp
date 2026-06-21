@@ -26,3 +26,5 @@ class Solution{
         return dummy->next;
     }
 };
+// tc=O(n)
+// sc o(1)
