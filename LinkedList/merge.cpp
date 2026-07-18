@@ -36,3 +36,5 @@ class Solution{
         return dummy.next;
     }
 };
+// time complexity:-O(n+m)
+// space complexity:-O(1)
