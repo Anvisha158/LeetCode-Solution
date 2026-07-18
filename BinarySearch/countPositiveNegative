@@ -20,20 +20,56 @@ class Solution{
 };
 // time complexity:- O(n)
 // space complexity"- O(1)
-// optimize code
-// use binary search because the array is sorted and time complexity will be O(log n)
-class Solution{
-    public:
-    int countPositiveNegative(vector<int> & nums){
-        int low=0;
-        int high=nums.size()-1;
-        while(low<=high){
-            int mid=low+(high-low)/2;
-            if(nums[mid]>0){
-                high=mid-1;
+// optimal approach
+// use binary search 
+class Solution {
+public:
+    int maximumCount(vector<int>& nums) {
+
+        int n = nums.size();
+
+        // first >= 0
+        int low = 0, high = n - 1;
+        int firstNonNegative = n;
+
+        while(low <= high) {
+
+            int mid = low + (high - low) / 2;
+
+            if(nums[mid] >= 0) {
+                firstNonNegative = mid;
+                high = mid - 1;
             }
-            else
+            else {
+                low = mid + 1;
             }
         }
+
+        int neg = firstNonNegative;
+
+        // first > 0
+        low = 0;
+        high = n - 1;
+
+        int firstPositive = n;
+
+        while(low <= high) {
+
+            int mid = low + (high - low) / 2;
+
+            if(nums[mid] > 0) {
+                firstPositive = mid;
+                high = mid - 1;
+            }
+            else {
+                low = mid + 1;
+            }
+        }
+
+        int pos = n - firstPositive;
+
+        return max(pos, neg);
     }
-} 
+};
+// time complexity:- O(log n)
+// space complexity:- O(1)
