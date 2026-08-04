@@ -31,3 +31,5 @@ public:
         return ans;
     }
 };
+// time complexity O(n) where n is the size of nums2
+// space complexity O(n) where n is the size of nums2 because we are using stack and map to store the elements
