@@ -22,3 +22,5 @@ class Solution{
         return st.empty();
     }
 };
+// Time Complextity O(n) because we are traversing the string once
+// space Complexity O(n) because we are using stack to store the opening brackets
