@@ -21,3 +21,5 @@ class solution{
         return ans;
     }
 };
+// time complexity O(n) because we are traversing the array twice
+// space complexity O(n) because we are using stack to store the elements
